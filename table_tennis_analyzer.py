@@ -3,7 +3,7 @@ from ultralytics import YOLO
 
 # Constants
 START_FRAME = 0
-END_FRAME = 500  # 0 means full video
+END_FRAME = 200  # 0 means full video
 
 # Load the YOLOv11n-pose model
 model = YOLO('yolo11n-pose.pt')
