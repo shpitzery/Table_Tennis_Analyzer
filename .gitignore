@@ -11,3 +11,5 @@ runs/
 
 # Ignore YOLO model files
 *.pt
+
+input.mp4
