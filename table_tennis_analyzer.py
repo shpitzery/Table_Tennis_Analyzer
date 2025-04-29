@@ -1,4 +1,5 @@
 import cv2
+import csv
 from ultralytics import YOLO
 
 # Constants
@@ -11,6 +12,11 @@ model = YOLO('yolo11n-pose.pt')
 # Open video
 input_path = 'input.mp4'
 output_path = 'output_with_detections.mp4'
+
+csv_output_path = 'player_positions.csv'
+csv_file = open(csv_output_path, mode='w', newline='')
+csv_writer = csv.writer(csv_file)
+csv_writer.writerow(['frame', 'player1_position_x', 'player1_position_y', 'player2_position_x', 'player2_position_y'])
 
 cap = cv2.VideoCapture(input_path)
 
@@ -78,9 +84,27 @@ while cap.isOpened():
     # Write the frame
     out.write(frame)
 
+    # Record player positions
+    if frame_idx >= START_FRAME and frame_idx <= END_FRAME:
+        player_centers = []
+        for person in result.boxes:
+            x1, y1, x2, y2 = map(int, person.xyxy[0])
+            cx = (x1 + x2) // 2
+            cy = (y1 + y2) // 2
+            player_centers.append((cx, cy))
+
+        # Sort players from left to right by x-coordinate
+        player_centers.sort(key=lambda p: p[0])
+
+        # Extract positions
+        p1x, p1y = player_centers[0] if len(player_centers) > 0 else ('', '')
+        p2x, p2y = player_centers[1] if len(player_centers) > 1 else ('', '')
+        csv_writer.writerow([frame_idx, p1x, p1y, p2x, p2y])
+
     frame_idx += 1
 
 # Release everything
 cap.release()
 out.release()
 cv2.destroyAllWindows()
+csv_file.close()
