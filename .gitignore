@@ -13,3 +13,5 @@ runs/
 *.pt
 
 *.mp4
+.DS_Store
+player_position_heatmap.png
