@@ -2,7 +2,7 @@ Download the input video from here:
 https://drive.google.com/file/d/1Cl0THtGExrQwwfNQp7cK6ncYIQy09QJE/view?usp=sharing
 # Table Tennis Match Analyzer
 
-![Python Version](https://img.shields.io/badge/python-3.9+-blue.svg)
+![Python Version](https://img.shields.io/badge/python-3.9+-blue.svg) ![OpenCV](https://img.shields.io/badge/OpenCV-4.12-orange) ![NumPy](https://img.shields.io/badge/Numpy-2.2-blueviolet) ![PyTorch](https://img.shields.io/badge/PyTorch-2.7-ee4c2c) ![Ultralytics](https://img.shields.io/badge/Ultralytics-8.3-purple)
 
 A comprehensive computer vision project that automatically analyzes table tennis match footage to extract player positions, track skeletons, recognize the score, and generate insightful data visualizations. This project demonstrates a multi-faceted approach to video analysis, combining object detection, pose estimation, and optical character recognition (OCR).
 
