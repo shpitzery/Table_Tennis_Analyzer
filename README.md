@@ -1,5 +1,3 @@
-Download the input video from here:
-https://drive.google.com/file/d/1Cl0THtGExrQwwfNQp7cK6ncYIQy09QJE/view?usp=sharing
 # Table Tennis Match Analyzer
 
 ![Python Version](https://img.shields.io/badge/python-3.9+-blue.svg) ![OpenCV](https://img.shields.io/badge/OpenCV-4.12-orange) ![NumPy](https://img.shields.io/badge/Numpy-2.2-blueviolet) ![PyTorch](https://img.shields.io/badge/PyTorch-2.7-ee4c2c) ![Ultralytics](https://img.shields.io/badge/Ultralytics-8.3-purple)
@@ -101,7 +99,8 @@ To run this project locally, follow these steps:
     ```
 
 4.  **Prepare Necessary Files**:
-    - Place the ![input video](https://drive.google.com/file/d/1Cl0THtGExrQwwfNQp7cK6ncYIQy09QJE/view?usp=sharing) in the root directory and name it `input.mp4`.
+    - Download the input video from ![here](https://drive.google.com/file/d/1Cl0THtGExrQwwfNQp7cK6ncYIQy09QJE/view?usp=sharing)
+    - Place the input video in the root directory and name it `input.mp4`.
     - if the `yolo11n-pose.pt` model file it's not already present - download and place it in the root directory.
 
 ---
