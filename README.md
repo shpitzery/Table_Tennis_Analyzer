@@ -99,7 +99,7 @@ To run this project locally, follow these steps:
     ```
 
 4.  **Prepare Necessary Files**:
-    - Download the input video from ![here](https://drive.google.com/file/d/1Cl0THtGExrQwwfNQp7cK6ncYIQy09QJE/view?usp=sharing)
+    - Download the input video from [here](https://drive.google.com/file/d/1Cl0THtGExrQwwfNQp7cK6ncYIQy09QJE/view?usp=sharing)
     - Place the input video in the root directory and name it `input.mp4`.
     - if the `yolo11n-pose.pt` model file it's not already present - download and place it in the root directory.
 
